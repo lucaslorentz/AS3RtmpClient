@@ -28,7 +28,7 @@ var connectionConfig:String = "rtmp://rtmp01.hddn.com/play playpath=mp4:vod/demo
 var video:Video = new Video();
 
 var rtmpNetStream:RtmpStreamPlayer = new RtmpStreamPlayer();				
-rtmpNetStream.play(connectionConfig, videoContainer.video);
+rtmpNetStream.play(connectionConfig, video);
 ```
 The play method receives a connection configuration like librtmp.
 http://rtmpdump.mplayerhq.hu/librtmp.3.html
