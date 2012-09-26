@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="rtmpClient.RtmpEncoder"/>
+    <classEntry path="rtmpClient.IRtmpMessage"/>
+    <classEntry path="rtmpClient.RtmpConnection"/>
+    <classEntry path="rtmpClient.IRtmpHandler"/>
+    <classEntry path="rtmpClient.RtmpDecoder"/>
+    <classEntry path="rtmpClient.RtmpHeader"/>
+    <classEntry path="rtmpClient.RtmpConfig"/>
+    <classEntry path="rtmpClient.messages.WindowAckSize"/>
+    <classEntry path="rtmpClient.messages.Aggregate"/>
+    <classEntry path="rtmpClient.messages.CommandAmf0"/>
+    <classEntry path="rtmpClient.messages.SetPeerBw"/>
+    <classEntry path="rtmpClient.messages.MetadataAmf0"/>
+    <classEntry path="rtmpClient.messages.Abort"/>
+    <classEntry path="rtmpClient.messages.Metadata"/>
+    <classEntry path="rtmpClient.messages.ChunkSize"/>
+    <classEntry path="rtmpClient.messages.AbstractMessage"/>
+    <classEntry path="rtmpClient.messages.Video"/>
+    <classEntry path="rtmpClient.messages.BytesRead"/>
+    <classEntry path="rtmpClient.messages.Audio"/>
+    <classEntry path="rtmpClient.messages.MessageType"/>
+    <classEntry path="rtmpClient.messages.Command"/>
+    <classEntry path="rtmpClient.messages.Control"/>
+    <classEntry path="rtmpClient.messages.DataMessage"/>
+    <classEntry path="rtmpClient.handShakes.DigestRtmpHandshake"/>
+    <classEntry path="rtmpClient.Utils"/>
+    <classEntry path="rtmpClient.IRtmpHandshake"/>
+    <classEntry path="rtmpClient.handShakes.BasicRtmpHandshake"/>
+    <classEntry path="rtmpClient.IRtmpLogger"/>
+    <classEntry path="rtmpClient.TraceRtmpLogger"/>
+    <classEntry path="rtmpClient.IRtmpPublisher"/>
+    <classEntry path="rtmpClient.RtmpStreamPlayer"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>
