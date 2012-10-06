@@ -1,7 +1,7 @@
 AS3RtmpClient
 ==============
 
-This is a proof of concept RtmpClient based on Flazr (http://flazr.com/) to use on the Flash Player (AS3 + Sockets + ByteArray).
+This is a proof of concept RtmpClient based on Flazr (http://flazr.com/) created to run on Flash Player (AS3 + Sockets + ByteArray).
 
 First of all. I did that code some time ago. I'm not working on it anymore, and it is just a proof of concept.
 
