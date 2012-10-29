@@ -38,5 +38,5 @@ Some videos will work, some others will not. Whatever, this library is just a pr
 LICENSE
 ==============
 
-As Flazr. This is licensed under the LGPL License.  
+As Flazr. This project is licensed under the LGPL License.  
 http://www.gnu.org/licenses/lgpl.html
