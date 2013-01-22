@@ -24,6 +24,8 @@ package rtmpClient
 		private var _primaryChannel:int = -1;
 		private var _seekTime:int;
 		
+		public var logger:IRtmpLogger = new TraceRtmpLogger();
+		
 		public function RtmpStreamPlayer()
 		{
 			_netConnection = new NetConnection();
@@ -48,6 +50,7 @@ package rtmpClient
 			_playPath = connectParameters.playpath;
 			
 			_rtmpConnection = new RtmpConnection();
+			_rtmpConnection.logger = logger;
 			_rtmpConnection.handler = this;
 			_rtmpConnection.connect(url, connectParameters);
 			
