@@ -40,7 +40,6 @@ package rtmpClient
 		private var _server:String
 		private var _port:int = 1935;
 		private var _application:String;
-		private var _instanceName:String;
 		
 		private var _transactionId:int = 1;
 		private var _transactionToFunctionMap:Object = {};
@@ -116,14 +115,13 @@ package rtmpClient
 		private function connectInternal(url:String, customConnectOptions:Object = null, isRedirect:Boolean = false):void {
 			_customConnectOptions = customConnectOptions;
 			
-			var regex:RegExp = /(?P<protocol>\w*?):\/\/   (?P<server>[\w._@]*?)   (?::(?P<port>\d*))?   (?:   \/+(?P<application>[\w._@]+?)  (?:\/+(?P<instanceName>[\w._@]+?))?    )?  \/*$/gx;
+			var regex:RegExp = /(?P<protocol>\w+?):\/\/   (?P<server>[^:\/]+?)    (?:\:(?P<port>\d+))?  (?:  \/+    (?P<application>[\s\S]+?)  )?    \/*   $/gx;
 			var parts:Object = regex.exec(url);
 			
 			_protocol = parts.protocol;
 			_server = parts.server;
 			_port = parts.port || 1935;
 			_application = parts.application;
-			_instanceName = parts.instanceName;
 			
 			_url = url;
 			
