@@ -49,7 +49,7 @@
 	</s:HGroup>
 	
 	<s:Label text="Log:" />
-	<s:TextArea id="textAreaLog" width="100%" height="100" enabled="false" />
+	<s:TextArea id="textAreaLog" width="100%" height="100" editable="false" />
 	
 	<s:Label text="Video:" />
 	<local:VideoContainer id="videoContainer"
