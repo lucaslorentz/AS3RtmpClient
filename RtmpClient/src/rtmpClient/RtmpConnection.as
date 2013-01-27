@@ -11,6 +11,8 @@ package rtmpClient
 	import flash.net.URLRequest;
 	import flash.utils.ByteArray;
 	
+	import rtmpClient.handShakes.BasicRtmpHandshake;
+	import rtmpClient.handShakes.DigestRtmpHandshake;
 	import rtmpClient.messages.BytesRead;
 	import rtmpClient.messages.Command;
 	import rtmpClient.messages.Control;
@@ -18,8 +20,6 @@ package rtmpClient
 	import rtmpClient.messages.Metadata;
 	import rtmpClient.messages.SetPeerBw;
 	import rtmpClient.messages.WindowAckSize;
-	import rtmpClient.handShakes.BasicRtmpHandshake;
-	import rtmpClient.handShakes.DigestRtmpHandshake;
 	
 	public class RtmpConnection extends EventDispatcher
 	{
@@ -242,11 +242,17 @@ package rtmpClient
 		}
 		
 		private function handleSocketBytes():void {
+			var lastAvailableBytes:int = 0;
 			while(_socket.connected && _socket.bytesAvailable > 0){
+				lastAvailableBytes = _socket.bytesAvailable;
+				
 				var message:IRtmpMessage = _decoder.process(_socket);
-				if(!message)
+				
+				if(_socket.bytesAvailable == lastAvailableBytes)
 					break;
-				handleMessage(message);
+				
+				if(message != null)
+					handleMessage(message);
 			}
 		}
 		
