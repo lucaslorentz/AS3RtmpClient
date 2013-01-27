@@ -255,7 +255,6 @@ package rtmpClient
 		}
 		
 		private static function encodeHeaderTypeAndChannel(_headerType:int, _channelId:int):ByteArray {
-			_channelId = 3;
 			var array:Array;
 			
 			if (_channelId <= 63) {
