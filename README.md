@@ -5,6 +5,8 @@ This is a proof of concept RtmpClient based on Flazr (http://flazr.com/) created
 
 First of all. I did that code some time ago. I'm not working on it anymore, and it is just a proof of concept.
 
+**In order to use flash.net.Socket in a Flash sandbox environment, you need to have a flash socket policy server. Look at http://www.adobe.com/devnet/flashplayer/articles/socket_policy_files.html. Because of this restriction, this library might be more suited for AIR apps.**
+
 MOTIVATION
 ==============
 
